@@ -1,0 +1,35 @@
+<div *ngIf="artist" class="row">
+    <div class="row">
+        <div class="col">
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="col-md-6">
+                        <img [src]="artist.images[0].url" class="img-fluid rounded-start" alt="Artist Image">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ artist.name }}
+                                <small class="text-muted">{{artist.type}}</small>
+                            </h5>
+                            <p class="card-text"><strong>Seguidores:</strong>
+                                {{ artist.followers.total | number}}
+                            </p>
+                            <p class="card-text"><strong>Géneros: </strong>
+                                <small class="text-muted">{{ artist.genres.join(', ')}}.</small>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <h1 class="text-center">Albumes de {{artist.name}}</h1>
+        <shared-table [dataSource]="artistAlbumsDataSource"
+            [displayedColumns]="['images','name', 'release_date', 'total_tracks']" [pageSizeOptions]="[5, 10, 25]"
+            [columnNames]="{'images': 'Portada' ,'name': 'Nombre', 'release_date': 'Fecha de lanzamiento', 'total_tracks': 'Número de pistas' }">
+        </shared-table>
+    </div>
+</div>
+

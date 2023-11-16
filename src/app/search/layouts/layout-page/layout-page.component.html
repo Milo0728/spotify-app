@@ -1,0 +1,12 @@
+<div class="content">
+    <div class="text-white">
+        <div class="d-flex justify-content-between align-items-center">
+            <button *ngIf="showBackButton"  routerLink="../" class="boton">Regresar</button>
+            <h3 class="text-center">Sección actual: <span class="fw-light">{{ sectionName }}</span></h3>
+            <button routerLink="/auth" class="btn btn-danger">Cerrar Sesión</button>
+        </div>
+    </div>
+</div>
+<div class="content text-white">
+    <router-outlet></router-outlet>
+</div>

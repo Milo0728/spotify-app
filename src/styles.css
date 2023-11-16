@@ -1,1 +1,70 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+:root {
+    --verde: #1ed760;
+    --verdeOscuro: #169c46;
+    --negro: #000000;
+    --gris: #727272;
+    --bgInput: #121212;
+    --blanco: #ffffff;
+    --degradado: linear-gradient(rgba(255, 255, 255, 0.1) 0%, rgb(0, 0, 0) 100%);
+}
+
+body {
+    background-color: rgb(0, 0, 0);
+    font-family: 'Roboto', sans-serif;
+}
+
+.full {
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--degradado)
+}
+
+.cuadro {
+    border-radius: 8px;
+    color: white;
+    background-color: black;
+    padding: 32px 0px;
+}
+
+.title {
+    text-align: center;
+    margin: 48px 0px;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.contenedor {
+    padding: 0 8rem 0 8rem;
+}
+
+.boton {
+    border: 0px;
+    margin-top: 20px;
+    background-color: var(--verde);
+    display: flex;
+    border-radius: 500px;
+    font-size: inherit;
+    justify-content: center;
+    user-select: none !important; 
+    min-block-size: 48px;
+    align-items: center;
+    padding-block: 8px;
+    padding-inline: 32px;
+    color: var(--negro);
+    font-weight: 700;
+    text-transform: none;
+    /* width: 100%; */
+}
+
+.boton:focus {
+    border: 2px solid #fff;
+}
+
+.content {
+    padding: 32px 32px 0 51px;
+}

@@ -1,0 +1,32 @@
+<hr>
+<div class="container mt-5">
+  <p class="text-center">En esta sección podrás buscar por el nombre del artista, y ver sus albumes, top canciones, y sus artistas relacionados</p>
+  <h1>Buscar por Artista:</h1>
+
+
+  <shared-search-box (filterChanged)="onFilterChanged($event)" [placeholder]="searchBoxPlaceholder"></shared-search-box>
+
+  <div *ngIf="searchResults !== null && searchResults.length > 0">
+    <h3>Artistas:</h3>
+    <div class="row">
+      <div *ngFor="let artist of searchResults" class="col-auto mb-5">
+        <div *ngIf="artist && artist.images && artist.images[0] && artist.images[0].url">
+          <div class="card_artist">
+            <img [src]="artist.images[0].url" alt="{{ artist.name }} image">
+            <div class="card__data">
+              <span>Seguidores: <strong>{{ artist.followers.total | number}}</strong></span>
+              <h2>{{ artist.name }}</h2>
+              <a [routerLink]="['/search/artists', artist.id]" class="boton">Ver más</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div *ngIf="searchResults !== null && searchResults.length === 0">
+    <p>No se encontraron artistas.</p>
+  </div>
+
+</div>
