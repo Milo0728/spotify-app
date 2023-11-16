@@ -1,8 +1,10 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
-# Environmnets
-/src/environments/environments.prod.ts
-/src/environments/environments.ts
+# Ignorar todos los archivos de entorno
+/src/environments/*.ts
+
+# Excepto environment.template.ts
+!/src/environments/environment.template.ts
 
 # Compiled output
 /dist
