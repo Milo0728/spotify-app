@@ -1,0 +1,19 @@
+.mat-mdc-form-field {
+    font-size: 14px;
+    width: 100%;
+}
+
+table {
+    width: 100%;
+}
+
+table td img {
+    margin: 1em;
+    width: 7em;
+    border-radius: 3px;
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}

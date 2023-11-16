@@ -1,0 +1,21 @@
+.bg-dark {
+    background-color: var(--negro) !important;
+    padding: 32px 32px 32px 51px;
+    margin-bottom: 0px;
+    width: 100%;
+}
+
+.bg-none {
+    background-color: transparent;
+    padding: 32px 0px 32px 51px;
+    margin-bottom: 0px;
+    width: 100%;
+}
+
+.spotify-logo {
+    height: 36px;
+}
+
+span {
+    margin-right: 2px;
+}
